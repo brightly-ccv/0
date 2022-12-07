@@ -2,9 +2,10 @@
 
 sudo apt update
 sudo apt upgrade -y
+sudo apt install kubuntu-desktop
 sudo apt install ansible firefox keepassxc -y
 sudo hostnamectl hostname nllt-100701
-sudo ssh-keygen -b 4096
+ssh-keygen -b 4096
 cat ~/.ssh/id_rsa.pub
 firefox https://github.com/settings/keys
 mkdir ~/Documents/github/my-repos/
