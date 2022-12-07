@@ -19,6 +19,7 @@ mv rclone.conf ~/.config/rclone/
 sudo snap install firefox 
 sudo apt install ansible keepassxc rclone -y
 sudo hostnamectl hostname nllt-100701
+export -n SESSION_MANAGER
 ssh-keygen -b 4096 
 cat ~/.ssh/id_rsa.pub
 konsole --new-tab -e rclone mount googledrive:backup ~/googledrive/
