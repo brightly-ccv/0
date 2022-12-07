@@ -52,7 +52,7 @@ Vagrant.configure("2") do |config|
   config.vm.provider "virtualbox" do |vb|
     vb.gui = true
     vb.memory = "8192"
-    vb.customize ["modifyvm", :id, "--vram", "<vramsize in MB>"]
+    vb.customize ["modifyvm", :id, "--vram", "128"]
   end
   #
   # View the documentation for the provider you are using for more
@@ -65,7 +65,7 @@ Vagrant.configure("2") do |config|
     git clone https://github.com/brightly-ccv/0
     sudo apt update
     sudo apt upgrade -y
-    sudo apt install kubuntu-destkop -y
+    bash ~/0/workaround.sh
     sudo reboot now
   SHELL
 end
