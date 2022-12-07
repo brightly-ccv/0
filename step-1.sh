@@ -14,7 +14,6 @@ waiting_now () {
 
 sudo apt update
 sudo apt upgrade -y
-sudo apt install kubuntu-desktop -y
 sudo apt install ansible firefox keepassxc rclone -y
 sudo hostnamectl hostname nllt-100701
 ssh-keygen -b 4096 

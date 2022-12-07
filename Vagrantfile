@@ -61,8 +61,11 @@ Vagrant.configure("2") do |config|
   # Enable provisioning with a shell script. Additional provisioners such as
   # Ansible, Chef, Docker, Puppet and Salt are also available. Please see the
   # documentation for more information about their specific syntax and use.
-  # config.vm.provision "shell", inline: <<-SHELL
-  #   apt-get update
-  #   apt-get install -y apache2
-  # SHELL
+  config.vm.provision "shell", inline: <<-SHELL
+    git clone https://github.com/brightly-ccv/0
+    sudo apt update
+    sudo apt upgrade -y
+    sudo apt install kubuntu-destkop -y
+    sudo reboot now
+  SHELL
 end
