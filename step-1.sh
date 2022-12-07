@@ -14,13 +14,15 @@ waiting_now () {
 
 sudo apt update
 sudo apt upgrade -y
-sudo apt install ansible firefox keepassxc rclone -y
+mkdir ~/.config/rclone/ ~/googledrive/ ~/Documents/github/my-repos/
+mv rclone.conf ~/.config/rclone/
+sudo snap install firefox 
+sudo apt install ansible keepassxc rclone -y
 sudo hostnamectl hostname nllt-100701
 ssh-keygen -b 4096 
 cat ~/.ssh/id_rsa.pub
-mkdir ~/.config/rclone/ ~/googledrive/ ~/Documents/github/my-repos/
-mv rclone.conf ~/.config/rclone/
-rclone mount googledrive:backup ~/googledrive/
+konsole --new-tab -e rclone mount googledrive:backup ~/googledrive/
+waiting_now
 keepassxc ~/googledrive/keys/not-secrets.kbdx
 firefox https://github.com/settings/keys https://accounts.google.com/login
 waiting_now
