@@ -1,8 +1,0 @@
-#! /bin/bash
-# because vagrant gets stuck on enfcfs withing kubuntu-desktop install
-# sudo apt install kubuntu-desktop -y &
-# sed -e "6i\sudo kill -9 $!" workaround | cat > workaround.sh
-# fg 1
-sudo apt install kubuntu-desktop -y
-sudo dpkg --configure -a
-sudo reboot now

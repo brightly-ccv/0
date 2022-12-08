@@ -23,9 +23,10 @@ sudo hostnamectl hostname nllt-100701
 export -n SESSION_MANAGER
 ssh-keygen -b 4096 
 cat ~/.ssh/id_rsa.pub
-rclone mount googledrive:backup ~/googledrive/ --allow-not-empty &
-keepassxc ~/googledrive/keys/not-secrets.kbdx
+rclone mount googledrive:backup ~/googledrive/ --allow-non-empty &
 firefox https://github.com/settings/keys https://accounts.google.com/login
+wait 3
+keepassxc ~/googledrive/keys/not-secrets.kbdx
 cd ~/Documents/github/my-repos/
 git clone git@github.com:brightly-ccv/driver-setup.git
 cd driver-setup
