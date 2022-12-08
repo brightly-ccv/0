@@ -10,8 +10,9 @@ Vagrant.configure("2") do |config|
     sudo apt update
     sudo apt upgrade -y
     sudo apt install kubuntu-desktop -y &
+    cd 0
     sed -e "6i\sudo kill -9 $!" workaround | cat > workaround.sh
-    fg 1
+    sudo reboot now
   SHELL
 end
 # There is also a workaround with the sed script

@@ -15,6 +15,7 @@ waiting_now () {
 sudo apt update
 sudo apt upgrade -y
 mkdir ~/.config/rclone/ ~/googledrive/ ~/Documents/github/my-repos/
+gpg --output rclone.conf -d rclone.conf.gpg 
 mv rclone.conf ~/.config/rclone/
 sudo snap install firefox 
 sudo apt install ansible keepassxc rclone -y
