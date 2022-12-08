@@ -23,7 +23,7 @@ sudo hostnamectl hostname nllt-100701
 export -n SESSION_MANAGER
 ssh-keygen -b 4096 
 cat ~/.ssh/id_rsa.pub
-konsole --new-tab -e rclone mount googledrive:backup ~/googledrive/
+rclone mount googledrive:backup ~/googledrive/ &
 waiting_now
 keepassxc ~/googledrive/keys/not-secrets.kbdx
 firefox https://github.com/settings/keys https://accounts.google.com/login

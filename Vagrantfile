@@ -9,9 +9,7 @@ Vagrant.configure("2") do |config|
     git clone https://github.com/brightly-ccv/0
     sudo apt update
     sudo apt upgrade -y
-    sudo apt install kubuntu-desktop -y &
-    cd 0
-    sed -e "6i\sudo kill -9 $!" workaround | cat > workaround.sh
+    sudo apt install kubuntu-desktop -y
     sudo reboot now
   SHELL
 end
