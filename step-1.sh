@@ -24,7 +24,7 @@ export -n SESSION_MANAGER
 ssh-keygen -b 4096 
 cat ~/.ssh/id_rsa.pub
 rclone mount googledrive:backup ~/googledrive/ --allow-non-empty &
-firefox https://github.com/settings/keys https://accounts.google.com/login
+firefox https://github.com/settings/keys https://accounts.google.com/login &
 wait 3
 keepassxc ~/googledrive/keys/not-secrets.kbdx
 cd ~/Documents/github/my-repos/
